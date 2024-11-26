@@ -35,10 +35,15 @@ El siguiente diagrama describe cómo se integró el filtro de Kalman en el siste
 
 
 Sensor (IMU) → Nodo de Kalman → Tópico filtrado → Nodo de control de navegación
+
 Sensor (IMU): Genera datos de orientación (simulados o reales).
+
 Nodo de Kalman: Aplica el filtro de Kalman a las lecturas de orientación.
+
 Tópico filtrado: Publica los datos procesados en un nuevo tópico.
+
 Nodo navegación: Utiliza los datos filtrados para navegación precisa.
+
 NODO DE COMPARACIÓN: Comparación de señales.
 
 ## Modelo Matemático del Filtro de Kalman
