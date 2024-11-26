@@ -25,6 +25,22 @@ El nodo implementa un filtro de Kalman para cada uno de los ángulos de orientac
 
 Al aplicar el filtro de Kalman, se mejora la precisión de las mediciones al reducir el impacto del ruido inherente en los sensores de la IMU.
 
+## Arquitectura de la Prueba
+
+El siguiente diagrama describe cómo se integró el filtro de Kalman en el sistema ROS:
+
+
+
+![Descripción](/ARQ.png)
+
+
+Sensor (IMU) → Nodo de Kalman → Tópico filtrado → Nodo de control de navegación
+Sensor (IMU): Genera datos de orientación (simulados o reales).
+Nodo de Kalman: Aplica el filtro de Kalman a las lecturas de orientación.
+Tópico filtrado: Publica los datos procesados en un nuevo tópico.
+Nodo navegación: Utiliza los datos filtrados para navegación precisa.
+NODO DE COMPARACIÓN: Comparación de señales.
+
 ## Modelo Matemático del Filtro de Kalman
 
 El filtro de Kalman es un algoritmo recursivo que estima el estado de un sistema dinámico a partir de mediciones con ruido. Para un sistema unidimensional, el filtro de Kalman se compone de dos pasos principales:
