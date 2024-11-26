@@ -146,8 +146,19 @@ Los valores de la varianza del proceso (`process_variance`) y la varianza de med
 
   - Representa el ruido en las mediciones.
   - Un valor más alto indica mediciones más ruidosas.
+ 
+## Comparación de Señales
 
-**Recomendación**: Ajusta estos valores basándote en las características de tu IMU y las condiciones de operación. Puedes realizar pruebas experimentales para encontrar los valores que proporcionen el mejor rendimiento de filtrado.
+A continuación, se presenta una gráfica que muestra la comparación entre las señales sin filtrar y filtradas aplicando el filtro de Kalman:
+
+![Descripción](/image.png)
+
+
+En la gráfica se observa cómo la señal filtrada (en verde) sigue de cerca la señal original (en azul), reduciendo significativamente el ruido presente en la señal sin filtrar (en rojo).
+
+## Conclusiones
+
+La aplicación del filtro de Kalman mejora notablemente la calidad de las mediciones de la IMU, reduciendo el ruido y proporcionando estimaciones más precisas de los ángulos de orientación. Al comparar las señales antes y después de filtrar, se aprecia que el filtro es efectivo y mejora la estabilidad y precisión de los datos, lo cual es beneficioso para aplicaciones que dependen de mediciones confiables de orientación.
 
 ## Licencia
 
